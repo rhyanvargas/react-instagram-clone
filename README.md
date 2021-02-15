@@ -1,9 +1,5 @@
 # Instagram Clone 
 
-
-
-
-
 This is a instagram clone that I built in order replicate full functionality:
 - Authentication
 - Account Creation
@@ -13,11 +9,40 @@ This is a instagram clone that I built in order replicate full functionality:
 - Following/Unfollowing Users
 - Loading states and more
 
+# Getting Started 
+
+In the project directory, you can run:
+
+### `npm run start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+
 ## Tech Stack
 - React
+    - `react-helmet`
+    - `react-dom`
+    - `react-helmet`
+    - `react-lines-ellipsis`
+    - `react-modal`
+    - `react-router-dom`
+    - `react-slick`
+    - `@rooks/use-outside-click`
+    - `@tanem/react-nprogress`
+- MaterialUI
 - Apollo
+    - `apollo-boost`
+    - `apollo-cache-inmemory`
+    - `apollo-client`
+    - `apollo-link-ws`
 - Hasura
+- Firebase
 - GraphQL
+    -`subscriptions-transport-ws`
 
 ## Routes (pages)
  - `/feed` (feed page)  
@@ -29,6 +54,7 @@ This is a instagram clone that I built in order replicate full functionality:
  - `/accounts/emailsignup` (signup page)
  - `*` (not found page)
 - `Notification` (notification tooltip list)
+
 ## Components (prefix = route name/page):
 - `FeedPost`
 - `FeedPostSkeleton`
@@ -58,17 +84,4 @@ This is a instagram clone that I built in order replicate full functionality:
 
 ## Concepts Implemented
 
-
-
-# Getting Started 
-
-In the project directory, you can run:
-
-### `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
