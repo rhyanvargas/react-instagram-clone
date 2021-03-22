@@ -1,26 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route  } from "react-router-dom";
-import feed from './pages/feed'
-import explore from './pages/explore'
-import login from './pages/login'
-import signup from './pages/signup'
-import post from './pages/post'
-import editProfile from './pages/edit-profile'
-import profile from './pages/profile'
-import notFound from './pages/not-found'
+import FeedPage from './pages/feed'
+import ExplorePage from './pages/explore'
+import LoginPage from './pages/login'
+import SignUpPage from './pages/signup'
+import PostPage from './pages/post'
+import EditProfilePage from './pages/edit-profile'
+import ProfilePage from './pages/profile'
+import NotFoundPage from './pages/not-found'
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/' component={feed}/>
-        <Route path='/explore' component={explore}/>
-        <Route exact path='/:username' component={profile}/>
-        <Route exact path='/p/:postId' component={post}/>
-        <Route path='/accounts/emailsignup' component={signup}/>
-        <Route path='/accounts/login' component={login}/>
-        <Route path='/accounts/edit' component={editProfile}/>
-        <Route path='*' component={notFound}/>
+        <Route exact path='/' component={FeedPage}/>
+        <Route path='/explore' component={ExplorePage}/>
+        <Route exact path='/:username' component={ProfilePage}/>
+        <Route exact path='/p/:postId' component={PostPage}/>
+        <Route path='/accounts/emailsignup' component={SignUpPage}/>
+        <Route path='/accounts/login' component={LoginPage}/>
+        <Route path='/accounts/edit' component={EditProfilePage}/>
+        <Route path='*' component={NotFoundPage}/>
       </Switch>
     </Router>
   )
