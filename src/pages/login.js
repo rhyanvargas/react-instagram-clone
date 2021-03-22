@@ -30,16 +30,21 @@ function LoginPage() {
 								margin="dense"
 								className={classes.textField}
 								autocomplete="username"
-							></TextField>
+							/>
 							<TextField
 								fullWidth
 								variant="filled"
+								type='password'
 								label="Password"
 								margin="dense"
 								className={classes.textField}
 								autocomplete="current-password"
+<<<<<<< HEAD
 								type="password"
 							></TextField>
+=======
+							/>
+>>>>>>> 82881b1dc27a0b1cdf240ae18cd0975aac0eae05
 							<Button
 								variant="contained"
 								fullWidth
@@ -82,7 +87,11 @@ function LoginPage() {
 	);
 }
 
+<<<<<<< HEAD
 export function LoginWithFacebook({ color, iconColor, variant}) {
+=======
+export function LoginWithFacebook({ color, iconColor, variant }) {
+>>>>>>> 82881b1dc27a0b1cdf240ae18cd0975aac0eae05
 	const classes = useLoginPageStyles();
 
 	const facebookIcon =
