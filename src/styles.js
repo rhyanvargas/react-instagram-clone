@@ -1,6 +1,7 @@
 import { makeStyles, withStyles, Tooltip } from "@material-ui/core";
 import IconSheet from "./images/icon-sheet.png";
 import IconSheet2 from "./images/icon-sheet-2.png";
+import logo from './images/logo.png'
 
 /* Feed page: /pages/feed.js */
 export const useFeedPageStyles = makeStyles(theme => ({
@@ -87,11 +88,12 @@ export const useLoginPageStyles = makeStyles({
     height: "100vh"
   },
   cardHeader: {
-    backgroundImage: `url(${IconSheet})`,
+    backgroundImage: `url(${logo})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "-98px 0",
+    backgroundPosition: "center",
+    // backgroundImage: `url(${IconSheet})`,
     height: 51,
-    width: 175,
+    width: '100%',
     margin: "22px auto 12px"
   },
   textField: {
@@ -131,11 +133,12 @@ export const useSignUpPageStyles = makeStyles({
     height: "100vh"
   },
   cardHeader: {
-    backgroundImage: `url(${IconSheet})`,
+    backgroundImage: `url(${logo})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "-98px 0",
+    backgroundPosition: "center",
+    // backgroundImage: `url(${IconSheet})`,
     height: 51,
-    width: 175,
+    width: '100%',
     margin: "22px auto 12px"
   },
   cardHeaderSubHeader: {
