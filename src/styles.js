@@ -534,7 +534,8 @@ export const useFeedPostStyles = makeStyles(theme => ({
     fontWeight: "600 !important"
   },
   datePosted: {
-    fontSize: "10px !important"
+    fontSize: "10px !important",
+    marginBottom: "8px"
   },
   likes: {
     fontWeight: "600 !important",
@@ -657,7 +658,8 @@ export const usePostStyles = makeStyles(theme => ({
   datePosted: {
     fontSize: "10px !important",
     order: 4,
-    padding: "6px 16px !important"
+    padding: "6px 16px !important",
+    marginBottom: "4px"
   },
   comment: {
     order: 5

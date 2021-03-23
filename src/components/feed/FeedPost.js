@@ -1,8 +1,23 @@
 import { React, useState } from "react";
 import { useFeedPostStyles } from "../../styles";
 import UserCard from "../shared/UserCard";
-import { CommentIcon, MoreIcon, SaveIcon, ShareIcon } from "../../icons";
-import { Button, Divider, Hidden, Link, Typography } from "@material-ui/core";
+import {
+	CommentIcon,
+	MoreIcon,
+	SaveIcon,
+	ShareIcon,
+	UnlikeIcon,
+	LikeIcon,
+	RemoveIcon,
+} from "../../icons";
+import {
+	Button,
+	Divider,
+	Hidden,
+	Link,
+	TextField,
+	Typography,
+} from "@material-ui/core";
 import HTMLEllipsis from "react-lines-ellipsis/lib/html";
 import SEO from "../shared/Seo";
 
@@ -17,7 +32,7 @@ function FeedPost({ post }) {
 			<article className={classes.article}>
 				{/* Feed Post Header */}
 				<div className={classes.postHeader}>
-					<UserCard />
+					<UserCard user={user} />
 					<MoreIcon className={classes.moreIcon} />
 				</div>
 				{/* Feed Post Image */}
@@ -40,6 +55,7 @@ function FeedPost({ post }) {
 					<div className={showCaption ? classes.expanded : classes.collapsed}>
 						<Link to={`/${user.username}`}>
 							<Typography
+								color="textPrimary"
 								variant="subtitle2"
 								component="span"
 								className={classes.username}
@@ -73,7 +89,7 @@ function FeedPost({ post }) {
 					</div>
 					<Link to={`/p/${id}`}>
 						<Typography
-							className={classes.commentLink}
+							className={classes.commentsLink}
 							variant="body2"
 							component="div"
 						>
@@ -84,7 +100,7 @@ function FeedPost({ post }) {
 						<div key={comments.id}>
 							<Link to={`/${comment.user.username}`}>
 								<Typography
-									variant="subtitle2"
+									variant="subtitle3"
 									component="span"
 									className={classes.commentUsername}
 								>
@@ -97,7 +113,7 @@ function FeedPost({ post }) {
 						</div>
 					))}
 					<Typography color="textSecondary" className={classes.datePosted}>
-						5 days ago
+						5 DAYS AGO
 					</Typography>
 					<Hidden xsDown>
 						<Divider />
@@ -110,13 +126,69 @@ function FeedPost({ post }) {
 }
 
 function LikeButton() {
-	return <>LikeButton</>;
+	const classes = useFeedPostStyles();
+	const [liked, setLiked] = useState(false);
+	const Icon = liked ? UnlikeIcon : LikeIcon;
+	const className = liked ? classes.liked : classes.like;
+	const onClick = liked ? handleUnlike : handleLike;
+
+	function handleUnlike() {
+		setLiked(false);
+	}
+
+	function handleLike() {
+		setLiked(true);
+	}
+
+	return <Icon className={className} onClick={onClick} />;
 }
 function SaveButton() {
-	return <>SaveButton</>;
+	const classes = useFeedPostStyles();
+	const [saved, setSaved] = useState(false);
+	const Icon = saved ? RemoveIcon : SaveIcon;
+	const onClick = saved ? handleSave : handleRemove;
+
+	function handleSave() {
+		setSaved(false);
+	}
+
+	function handleRemove() {
+		setSaved(true);
+	}
+
+	return <Icon className={classes.saveIcon} onClick={onClick} />;
 }
 function Comment() {
-	return <>Comment</>;
+	const classes = useFeedPostStyles();
+	const [content, setContent] = useState("");
+
+	return (
+		<div className={classes.commentContainer}>
+			<TextField
+				className={classes.textField}
+				fullWidth
+				value={content}
+				placeholder="Add a comment..."
+				multiline
+				rowsMax={5}
+				rows={1}
+				onChange={(event) => setContent(event.target.value)}
+				InputProps={{
+					classes: {
+						root: classes.root,
+						underline: classes.underline,
+					},
+				}}
+			/>
+			<Button
+				color="primary"
+				className={classes.commentButton}
+				disabled={!content.trim()}
+			>
+				Post
+			</Button>
+		</div>
+	);
 }
 
 export default FeedPost;

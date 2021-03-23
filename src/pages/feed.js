@@ -24,7 +24,7 @@ function FeedPage() {
        <Hidden smDown>
          <div className={classes.sidebarContainer}>
            <div className={classes.sidebarWrapper}>
-             <UserCard />
+             <UserCard  avatarSize={50}/>
              <FeedSideSuggestions />
            </div>
          </div>

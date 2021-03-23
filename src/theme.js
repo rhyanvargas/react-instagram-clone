@@ -26,6 +26,7 @@ const theme = createMuiTheme({
     }
   },
   overrides: {
+
     MuiInputLabel: {
       root: {
         "&$focused": {
@@ -102,6 +103,18 @@ const theme = createMuiTheme({
     MuiDialog: {
       paperScrollPaper: {
         borderRadius: 12
+      }
+    },
+    MuiLink: {
+      root: {
+        textDecoration: 'none',
+        cursor: 'pointer'
+      },
+     
+      underlineHover: {
+        '&:hover': {
+          textDecoration: 'none',
+        }
       }
     }
   }

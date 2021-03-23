@@ -5,7 +5,7 @@ export const defaultUser = {
   username: "username",
   name: "name",
   profile_image:
-    "https://instagram.fhou1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/101471703_266770338018058_2255487094648471552_n.jpg?_nc_ht=instagram.fhou1-1.fna.fbcdn.net&_nc_ohc=GIar_vXLJn4AX-ekheq&tp=1&oh=c438dffed7d0151dbe768e955b1fca7d&oe=6054BC5C"
+    "https://instagram.fhou1-2.fna.fbcdn.net/v/t51.2885-19/s150x150/101471703_266770338018058_2255487094648471552_n.jpg?tp=1&_nc_ht=instagram.fhou1-2.fna.fbcdn.net&_nc_ohc=2Kd9VxBw1bwAX_2RSNt&ccb=7-4&oh=f9217e81938b7a71c2c0effbfbd05fb6&oe=6084325C&_nc_sid=4f375e"
   // profile_image:
   // "https://instagram.com/static/images/anonymousUser.jpg/23e7b3b2a737.jpg"
 };
@@ -16,7 +16,7 @@ export function getDefaultUser() {
     username: "username",
     name: "name",
     profile_image:
-      "https://scontent-ort2-2.cdninstagram.com/v/t51.2885-19/s150x150/82559664_3161307737426774_8687807477812559872_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com&_nc_ohc=llb3VCRb-mkAX_XTEi3&oh=64f0323db646c01299e513e3337b83ff&oe=5E8620BF"
+      "https://instagram.fhou1-2.fna.fbcdn.net/v/t51.2885-19/s150x150/101471703_266770338018058_2255487094648471552_n.jpg?tp=1&_nc_ht=instagram.fhou1-2.fna.fbcdn.net&_nc_ohc=2Kd9VxBw1bwAX_2RSNt&ccb=7-4&oh=f9217e81938b7a71c2c0effbfbd05fb6&oe=6084325C&_nc_sid=4f375e"
   };
 }
 
